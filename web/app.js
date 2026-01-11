@@ -53,7 +53,6 @@ function renderDashboard() {
     grid.innerHTML = filteredData.map(createWeatherCard).join("");
 }
 
-// Search
 document.getElementById("searchInput").addEventListener("input", e => {
     const value = e.target.value.toLowerCase();
 
@@ -65,11 +64,9 @@ document.getElementById("searchInput").addEventListener("input", e => {
     renderDashboard();
 });
 
-// Theme toggle
 document.getElementById("themeToggle").addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
     document.body.classList.toggle("light-mode");
 });
 
-// Load data on start
 loadWeatherData();
